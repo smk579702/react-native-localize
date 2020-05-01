@@ -8,7 +8,9 @@
     "postinstall": "yarn clean-modules && yarn pod-install",
     "pod-install": "cd ./ios && pod install && cd ..",
     "start": "react-native start",
-    "reinstall": "yarn clean && yarn install"
+    "reinstall": "yarn clean && yarn install",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "i18n-js": "3.3.0",
@@ -16,11 +18,13 @@
     "react": "16.9.0",
     "react-native": "0.61.2",
     "react-native-fs": "2.14.1",
-    "react-native-localize": "file:../"
+    "react-native-localize": "file:../",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "7.6.2",
     "@babel/runtime": "7.6.2",
     "metro-react-native-babel-preset": "0.56.0"
-  }
+  },
+  "snyk": true
 }
